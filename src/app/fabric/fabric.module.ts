@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 import { FabricBreadcrumb }   from './breadcrumb/';
 import { FabricButton, FabricIconButton, FabricPrimaryButton, FabricHeroButton, FabricCompoundButton, FabricCommandButton } from './button/'
 import { FabricCheckbox } from './checkbox/';
-import { FabricChoiceGroup } from './choice-group/';
+import { FabricChoiceGroup, FabricChoiceOption } from './choice-group/';
 import { FabricIcon } from './icon/';
 import { FabricImage } from './image/';
 import { FabricLabel } from './label';
@@ -17,7 +17,7 @@ const FABRIC_COMPONENTS = [
   FabricBreadcrumb,
   FabricButton, FabricIconButton, FabricPrimaryButton, FabricHeroButton, FabricCompoundButton, FabricCommandButton,
   FabricCheckbox,
-  FabricChoiceGroup,
+  FabricChoiceGroup, FabricChoiceOption,
   FabricIcon,
   FabricImage,
   FabricLabel,
