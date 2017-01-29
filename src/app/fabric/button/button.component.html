@@ -1,0 +1,46 @@
+<button class="{{ class }} ms-Button ms-Button--{{ buttonType }}" [disabled]="disabled ? true : null" #button>
+    <span *ngIf="icon" class="ms-Button-icon"><i class="ms-Icon ms-Icon--{{ icon }}"></i></span>
+    <span class="ms-Button-label">
+        <ng-content></ng-content>
+    </span>
+    <span *ngIf="description" class="ms-Button-description">{{ description }}</span>
+    <span *ngIf="ariaDescription" class="ms-u-screenReaderOnly">{{ ariaDescription }}</span>
+</button>
+
+<!--
+<div>
+    <button data-automation-id="test" icon="AddFriend" aria-labelledby="Button30" aria-describedby="Button31" class="ms-Button ms-Button--command">
+    <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--AddFriend"></i></span>
+    <span class="ms-Button-label" id="Button30"> Create account</span>
+    <span class="ms-Button-description" id="Button31">Description of the action this button takes</span>
+    </button>
+</div>
+
+<br>
+<div>
+    <button data-automation-id="test" aria-labelledby="Button6" class="ms-Button">
+        <span class="ms-Button-label" id="Button6">Create account</span>
+    </button>
+</div>
+<br>
+<div>
+    <button data-automation-id="test" aria-labelledby="Button12" class="ms-Button ms-Button--primary"><span class="ms-Button-label" id="Button12">Create account</span></button>
+</div>
+<br>
+<div>
+    <button aria-labelledby="Button24" aria-describedby="Button25" class="ms-Button ms-Button--compound">
+        <span class="ms-Button-label" id="Button24">Create account</span>
+        <span class="ms-Button-description" id="Button25">You can create a new account here.</span>
+    </button>
+</div>
+<br>
+<div>
+    <button icon="Add" aria-labelledby="Button18" class="ms-Button ms-Button--hero">
+        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--Add"></i></span>
+        <span class="ms-Button-label" id="Button18"> Create account</span></button>
+</div>
+<br>
+<div>
+    <button icon="Emoji2" title="Emoji" aria-label="Emoji" class="ms-Button ms-Button--icon"><span class="ms-Button-icon"><i class="ms-Icon ms-Icon--Emoji2"></i></span><span class="ms-Button-label" id="Button36"></span></button>
+</div>
+-->

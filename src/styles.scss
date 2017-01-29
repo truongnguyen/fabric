@@ -1,0 +1,116 @@
+@import './app/fabric/common';
+
+// When focus is set using the keyboard, apply an outline.
+@mixin focus-outline {
+  .ms-Fabric.is-focusVisible &:focus {
+    outline: 1px solid $focusedBorderColor;
+  }
+}
+
+.ms-Link {
+  @include ms-baseFont;
+  color: $ms-color-themePrimary;
+  margin: 0;
+  overflow: inherit;
+  padding: 0;
+  text-overflow: inherit;
+
+  // State: The button is not disabled.
+  &:not(.is-disabled) {
+    &:hover,
+    &:focus {
+      color: $ms-color-themeDarker;
+    }
+
+    &:active {
+      color: $ms-color-themePrimary;
+    }
+  }
+
+  // State: The button is disabled.
+  &.is-disabled {
+    color: $ms-color-neutralTertiary;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+// Link implemented as a button.
+button.ms-Link {
+  @include focus-border;
+  @include text-align(left);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline;
+  font-size: inherit; // Ensure that we inherit font size, rather than the browser's default.
+}
+
+// Link implemented as an anchor.
+a.ms-Link {
+  @include focus-outline;
+  text-decoration: none;
+}
+
+@mixin ms-Label-is-disabled {
+  color: $ms-color-neutralTertiary;
+}
+
+@mixin ms-Label-is-required {
+  &::after {
+    content: ' *';
+    color: $ms-color-error;
+  }
+}
+
+.ms-Label {
+  @include ms-font-m;
+  @include ms-u-normalize;
+  color: $ms-color-neutralPrimary;
+  box-sizing: border-box;
+  display: block;
+  padding: 5px 0;
+
+  &.is-required {
+    @include ms-Label-is-required;
+  }
+
+  &.is-disabled {
+    @include ms-Label-is-disabled;
+  }
+}
+
+.ms-Image {
+  overflow: hidden;
+}
+
+// Modifier: The image frame should fill its parent element.
+.ms-Image--maximizeFrame {
+  height: 100%;
+  width: 100%;
+}
+
+.ms-Image-image {
+  display: block;
+  opacity: 0;
+
+  &.is-loaded {
+    opacity: 1;
+  }
+}
+
+.ms-Image-image--center,
+.ms-Image-image--contain,
+.ms-Image-image--cover {
+  position: relative;
+  @include left(50%);
+  top: 50%;
+  // transform-translateX mixin is not used here because a transateY is also required.
+  @include LTR {
+    transform: translate(-50%,-50%);
+  }
+  @include RTL {
+    transform: translate(50%,-50%);
+  }
+}
+

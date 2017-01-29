@@ -1,0 +1,57 @@
+<nav role="navigation" class="ms-Nav">
+    <div *ngFor="let group of groups" class="ms-Nav-group"  [class.is-expanded]="group.expanded">
+        <button (click)="toggle(group)" class="ms-Nav-chevronButton ms-Nav-chevronButton--group ms-Nav-groupHeaderFontSize" tabindex="0">
+            <i class="ms-Nav-chevron ms-Icon ms-Icon--ChevronDown"></i>{{ group.name }}
+        </button>
+        <div class="ms-Nav-groupContent ms-u-slideDownIn20">
+            <ul role="list">
+                <li role="listitem" *ngFor="let link of group.links" (click)="route(group, link)">
+                    <div class="ms-Nav-compositeLink" [routerLinkActive]="['is-selected']">
+                        <a class="ms-Nav-link" title="{{ link.title }}" [routerLink]="link.routerLink" tabindex="0" style="padding-left: 28px;">
+                            <span class="Nav-linkText">{{ link.name }}</span>
+                            <!--<span class="Nav-linkFlair is-state2">beta</span>-->
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--<nav role="navigation" class="ms-Nav">
+    <div class="ms-Nav-group" [class.is-expanded]="expanded">
+        <button (click)="expanded = !expanded" class="ms-Nav-chevronButton ms-Nav-chevronButton--group ms-Nav-groupHeaderFontSize" tabindex="0">
+            <i class="ms-Nav-chevron ms-Icon ms-Icon--ChevronDown"></i>Basic components
+        </button>
+        <div class="ms-Nav-groupContent ms-u-slideDownIn20">
+            <ul role="list">
+                <li role="listitem">
+                    <div class="ms-Nav-compositeLink">
+                        <a class="ms-Nav-link" href="#/examples/breadcrumb" title="Breadcrumb" tabindex="0" style="padding-left: 28px;">
+                        <span class="Nav-linkText">Breadcrumb</span>
+                        <span class="Nav-linkFlair is-state2">beta</span>
+                        </a>
+                    </div>
+                </li>
+                <li role="listitem">
+                    <div class="ms-Nav-compositeLink">
+                        <a class="ms-Nav-link" href="#/examples/breadcrumb" title="Breadcrumb" tabindex="0" style="padding-left: 28px;">
+                        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--Edit"></i></span>
+                        <span class="Nav-linkText">Breadcrumb 2</span>
+                        <span class="Nav-linkFlair is-state2">beta</span>
+                        </a>
+                    </div>
+                </li>
+                <li role="listitem">
+                    <div class="ms-Nav-compositeLink is-selected">
+                        <a class="ms-Nav-link" href="#/examples/button" title="Button" tabindex="0" style="padding-left: 28px;">
+                        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--Edit"></i></span>
+                        <span class="Nav-linkText">Button</span>
+                        <span class="Nav-linkFlair is-state2">beta</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
