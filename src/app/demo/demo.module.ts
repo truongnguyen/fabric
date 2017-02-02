@@ -8,17 +8,21 @@ import { FabricModule } from '../fabric/';
 import { ButtonDemoComponent } from './button/';
 import { BreadcrumbDemoComponent } from './breadcrumb/';
 import { CheckboxDemoComponent } from './checkbox/'
+import { CalloutDemoComponent } from './callout/';
 import { ChoiceGroupDemoComponent } from './choice-group/';
 import { CommandBarDemoComponent } from './command-bar/';
+import { ContextMenuDemoComponent } from './context-menu/';
 import { LabelDemoComponent } from './label/';
 import { NavDemoComponent } from './nav/';
 
 const DEMO_COMPONENTS = [
   ButtonDemoComponent,
   BreadcrumbDemoComponent,
+  CalloutDemoComponent,
   CheckboxDemoComponent,
   ChoiceGroupDemoComponent,
   CommandBarDemoComponent,
+  ContextMenuDemoComponent,
   LabelDemoComponent,
   NavDemoComponent
 ];
