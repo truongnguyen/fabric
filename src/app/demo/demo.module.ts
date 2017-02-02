@@ -9,6 +9,7 @@ import { ButtonDemoComponent } from './button/';
 import { BreadcrumbDemoComponent } from './breadcrumb/';
 import { CheckboxDemoComponent } from './checkbox/'
 import { ChoiceGroupDemoComponent } from './choice-group/';
+import { CommandBarDemoComponent } from './command-bar/';
 import { LabelDemoComponent } from './label/';
 import { NavDemoComponent } from './nav/';
 
@@ -17,6 +18,7 @@ const DEMO_COMPONENTS = [
   BreadcrumbDemoComponent,
   CheckboxDemoComponent,
   ChoiceGroupDemoComponent,
+  CommandBarDemoComponent,
   LabelDemoComponent,
   NavDemoComponent
 ];

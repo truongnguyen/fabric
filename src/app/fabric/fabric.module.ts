@@ -8,6 +8,7 @@ import { FabricBreadcrumb }   from './breadcrumb/';
 import { FabricButton, FabricIconButton, FabricPrimaryButton, FabricHeroButton, FabricCompoundButton, FabricCommandButton } from './button/'
 import { FabricCheckbox } from './checkbox/';
 import { FabricChoiceGroup, FabricChoiceOption } from './choice-group/';
+import { FabricCommandBar } from './command-bar/';
 import { FabricIcon } from './icon/';
 import { FabricImage } from './image/';
 import { FabricLabel } from './label';
@@ -18,6 +19,7 @@ const FABRIC_COMPONENTS = [
   FabricButton, FabricIconButton, FabricPrimaryButton, FabricHeroButton, FabricCompoundButton, FabricCommandButton,
   FabricCheckbox,
   FabricChoiceGroup, FabricChoiceOption,
+  FabricCommandBar,
   FabricIcon,
   FabricImage,
   FabricLabel,

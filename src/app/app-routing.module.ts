@@ -5,6 +5,7 @@ import {  ButtonDemoComponent,
           BreadcrumbDemoComponent,
           CheckboxDemoComponent,
           ChoiceGroupDemoComponent,
+          CommandBarDemoComponent,
           NavDemoComponent,
           LabelDemoComponent } from './demo/';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'breadcrumb',  component: BreadcrumbDemoComponent },
   { path: 'checkbox',  component: CheckboxDemoComponent },
   { path: 'choice-group',  component: ChoiceGroupDemoComponent },
+  { path: 'command-bar',  component: CommandBarDemoComponent },
   { path: 'label',  component: LabelDemoComponent },
   { path: 'nav',  component: NavDemoComponent }
 ];
