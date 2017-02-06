@@ -1,4 +1,8 @@
 import {  ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FabricLayerContainer } from './layer-container.service';
+
+/** Next overlay unique ID. */
+let nextUniqueId = 0;
 
 @Component({
   selector: 'fabric-layer',
@@ -8,7 +12,22 @@ import {  ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FabricLayer implements OnInit {
-  constructor() { }
+  constructor(private layerContainer: FabricLayerContainer) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.create();
+  }
+
+  create(): void {
+    this.createPaneElement();
+  }
+
+  private createPaneElement(): HTMLElement {
+    let pane = document.createElement('div');
+    pane.id = `fabric-layer-${ nextUniqueId++ }`;
+    
+    this.layerContainer.getContainerElement().appendChild(pane);
+
+    return pane;
+  }
 }

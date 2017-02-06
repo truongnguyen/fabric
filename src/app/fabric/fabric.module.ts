@@ -14,7 +14,7 @@ import { FabricContextMenu } from './context-menu/';
 import { FabricIcon } from './icon/';
 import { FabricImage } from './image/';
 import { FabricLabel } from './label';
-import { FabricLayer } from './layer/';
+import { FabricLayer, FabricLayerContainer } from './layer/';
 import { FabricNav, FabricNavLink, FabricNavGroup } from './nav';
 
 const FABRIC_COMPONENTS = [
@@ -41,6 +41,6 @@ const FABRIC_COMPONENTS = [
   ],
   declarations: [ FABRIC_COMPONENTS ],
   exports: [ FABRIC_COMPONENTS ],
-  providers: [],
+  providers: [ FabricLayerContainer ],
 })
 export class FabricModule { }

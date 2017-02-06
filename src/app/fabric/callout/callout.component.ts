@@ -1,4 +1,4 @@
-import {  ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {  ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'fabric-callout',
@@ -8,7 +8,11 @@ import {  ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FabricCallout implements OnInit {
+  @Input() target: HTMLElement | MouseEvent;
+
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    
+  }
 }

@@ -16,7 +16,8 @@
       </div>
     </div>
     <div class="ExampleCard-example">
-      <fabric-callout></fabric-callout>
+      <fabric-button (click)="visible = !visible">Toggle</fabric-button>
+      <fabric-callout *ngIf="visible"></fabric-callout>
     </div>
   </div>
   <!--Nav:End-->
