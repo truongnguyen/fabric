@@ -19,7 +19,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/office-ui-fabric-core/dist/css/fabric.css",
         "styles.scss"
       ],
       "scripts": [],
