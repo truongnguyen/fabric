@@ -5,8 +5,7 @@
         <div class="Header">
           <button *md class="Header-button"><i class="ms-Icon ms-Icon--GlobalNavButton"></i></button>
           <div class="Header-title ms-font-xl ms-fontColor-white"><i class="ms-Icon ms-Icon--Org"></i>
-            <!-- react-text: 8 -->Fabric - React
-            <!-- /react-text -->
+            Fabric - Angular
           </div>
           <div class="Header-buttons">
             <div class="ms-FocusZone" data-focuszone-id="FocusZone0"><a class="Header-button ms-fontColor-white" href="#/" tabindex="0">Getting started</a><a class="Header-button ms-fontColor-white"
@@ -17,6 +16,22 @@
       </div>
     </div>
     <div class="ms-App-nav">
+      <fabric-nav>
+        <fabric-nav-group name="Basic Components" expanded="true">
+          <fabric-nav-link name="Breadcrumb" [routerLink]="['./breadcrumb']"></fabric-nav-link>
+          <fabric-nav-link name="Button" [routerLink]="['./button']"></fabric-nav-link>
+          <fabric-nav-link name="Callout" [routerLink]="['./callout']"></fabric-nav-link>
+          <fabric-nav-link name="Checkbox" [routerLink]="['./checkbox']"></fabric-nav-link>
+          <fabric-nav-link name="ChoiceGroup" [routerLink]="['./choice-group']"></fabric-nav-link>
+          <fabric-nav-link name="CommandBar" [routerLink]="['./command-bar']"></fabric-nav-link>
+          <fabric-nav-link name="ContextMenu" [routerLink]="['./context-menu']"></fabric-nav-link>
+          <fabric-nav-link name="Label" [routerLink]="['./label']"></fabric-nav-link>
+          <fabric-nav-link name="Nav" [routerLink]="['./nav']"></fabric-nav-link>
+        </fabric-nav-group>
+        <fabric-nav-group name="Layout Components">
+          <fabric-nav-link name="Nav" [routerLink]="['./breadcrumb']"></fabric-nav-link>
+        </fabric-nav-group>
+      </fabric-nav>
     </div>
     <div class="ms-App-content" data-is-scrollable="true">
       <router-outlet></router-outlet>

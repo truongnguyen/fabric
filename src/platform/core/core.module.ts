@@ -1,15 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FabricButtonComponent } from './button/button.component';
+import { FabricButtonModule } from './button';
+import { FabricNavModule } from './nav';
 
 @NgModule({
-  declarations: [
-    FabricButtonComponent
-  ],
-  exports: [FabricButtonComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FabricButtonModule,
+    FabricNavModule
+  ],
+  exports: [
+    FabricButtonModule,
+    FabricNavModule
   ],
   providers: []
 })

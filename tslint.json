@@ -108,15 +108,15 @@
       "check-type"
     ],
     "directive-selector": [
-      true,
+      false,
       "attribute",
-      "app",
+      "fabric",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "fabric",
       "kebab-case"
     ],
     "use-input-property-decorator": true,
